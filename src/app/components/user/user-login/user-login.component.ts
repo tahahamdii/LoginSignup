@@ -35,16 +35,17 @@ export class UserLoginComponent implements OnInit {
     email: '',
     password: ''
   };
+  alert('Welcome to the game! Please log in with your account.');
+
   }
   onLogin() {
 
-    this.route.navigateByUrl('/dashboard');
+    window.location.href = 'https://www.google.com';
   this.accService.onLogin(this.loginObj).subscribe((res: any) => {
 
 
     console.log('res',res)
     localStorage.setItem('token',res.token);
-     this.route.navigateByUrl('/dashboard');
-  })
+    window.location.href = 'https://www.google.com';  })
   }
 }

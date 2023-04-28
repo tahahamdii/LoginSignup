@@ -64,16 +64,16 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "eployeeCrud:build"
+          },
           "configurations": {
             "production": {
               "browserTarget": "eployeeCrud:build:production"
-            },
-            "development": {
-              "browserTarget": "eployeeCrud:build:development"
             }
-          },
-          "defaultConfiguration": "development"
+          }
         },
+        ,
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
@@ -99,5 +99,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "836b2355-bb24-4fb6-8d32-338000baafe2"
   }
 }
